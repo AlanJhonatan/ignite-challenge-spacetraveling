@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 import { FiCalendar, FiUser } from 'react-icons/fi';
 import { getPrismicClient } from '../services/prismic';
+import { formatDate } from '../utils/datefns';
 import styles from './home.module.scss';
 
 interface Post {
@@ -43,7 +44,7 @@ export default function Home({ postsPagination }: HomeProps): ReactElement {
                 <div className={styles.info}>
                   <div>
                     <FiCalendar />
-                    <time>{post.first_publication_date}1</time>
+                    <time>{formatDate(post.first_publication_date)}</time>
                   </div>
 
                   <div>
