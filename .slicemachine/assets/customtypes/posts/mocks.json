@@ -1,0 +1,51 @@
+{
+  "id": "5c964191-7ef2-4cf3-854b-e32694fd8fa2",
+  "uid": "odit-neque-est",
+  "type": "posts",
+  "data": {
+    "title": "enable global interfaces",
+    "subtitle": "brand magnetic platforms",
+    "author": "harness cutting-edge relationships",
+    "banner": {
+      "dimensions": {
+        "width": 1440,
+        "height": 400
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=1440&h=400&fit=crop"
+    },
+    "content": [
+      {
+        "heading": "expedite rich architectures",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Nisi aliquip nisi commodo non commodo eiusmod ea.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "optimize intuitive metrics",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Occaecat cillum deserunt dolore commodo enim in eiusmod aliqua irure cupidatat qui.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "brand customized metrics",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Id et exercitation occaecat officia occaecat laboris id culpa. Laborum id laborum qui veniam sunt Lorem deserunt nostrud dolor dolor excepteur consequat irure culpa occaecat.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}

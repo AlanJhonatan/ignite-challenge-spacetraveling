@@ -1,1 +1,50 @@
-// TODO
+.container {
+  max-width: 720px;
+  margin: 1rem auto;
+
+  a {
+    color: var(--highlight);
+    font-weight: 600;
+  }
+
+  .loadMoreButton {
+    margin-top: 1rem;
+  }
+}
+
+.post {
+  margin-bottom: 3rem;
+
+
+  h2 {
+    transition: color .3s;
+
+    &:hover {
+      color: var(--highlight);
+    }
+  }
+
+  h3 {
+    margin-top: 0.5rem;
+    color: var(--body);
+    font-weight: normal;
+  }
+
+  .info {
+    margin-top: 1.5rem;
+    color: var(--info);
+    display: flex;
+    font-weight: 400;
+
+    div:not(:first-child) {
+      margin-left: 1rem;
+    }
+
+    div {
+      :first-child {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+

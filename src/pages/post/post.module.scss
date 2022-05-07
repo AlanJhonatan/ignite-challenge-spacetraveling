@@ -1,1 +1,19 @@
-// TODO
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+
+  .banner {
+    object-fit: cover;
+    max-height: 400px;
+    margin-bottom: 5rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .content {
+
+  }
+}

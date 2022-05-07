@@ -1,8 +1,12 @@
+import Head from 'next/head';
+import { ReactElement } from 'react';
+
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { getPrismicClient } from '../../services/prismic';
 
-import commonStyles from '../../styles/common.module.scss';
+// import commonStyles from '../../styles/common.module.scss';
+
 import styles from './post.module.scss';
 
 interface Post {
@@ -26,20 +30,44 @@ interface PostProps {
   post: Post;
 }
 
-// export default function Post() {
-//   // TODO
-// }
+export default function Post({ post }: PostProps): ReactElement {
+  return (
+    <>
+      <Head>
+        <title>Post | spacetraveling.</title>
+      </Head>
 
-// export const getStaticPaths = async () => {
-//   const prismic = getPrismicClient({});
-//   const posts = await prismic.getByType(TODO);
+      <main className={styles.container}>
+        <div className={styles.banner}>
+          <img src="/images/Banner.png" alt="banner" />
+        </div>
 
-//   // TODO
-// };
+        <div className={styles.content} />
+      </main>
+    </>
+  );
+}
 
-// export const getStaticProps = async ({params }) => {
-//   const prismic = getPrismicClient({});
-//   const response = await prismic.getByUID(TODO);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prismic = getPrismicClient({});
+  const posts = await prismic.getByType('posts');
 
-//   // TODO
-// };
+  // const paths = posts.results.map(post => post.uid);
+
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const prismic = getPrismicClient({});
+  const response = await prismic.getByUID('posts', params.slug.toString());
+
+  return {
+    props: {
+      post: response,
+    },
+    redirect: '',
+  };
+};
